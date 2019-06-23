@@ -1,0 +1,61 @@
+
+.aa-seller-form{
+    form {
+        width: fit-content;
+    }
+    label {
+        min-width: 104px;
+        text-align: right;
+        margin-right: 25px;
+    }
+    input[type=text], input[type=email], .btn.dropdown-toggle{
+        min-width: 250px;
+        border-color: grey;
+        border-radius: 4px;
+        height: 35px;
+        background-color: white;
+        border-style: solid;
+        border-width: 2px;
+    }
+    .pretty.p-icon input:checked ~ .state .icon {
+        background: #41a0b6;
+        color: white;
+    }
+    .btn.dropdown-toggle::after {
+        border-top: .5em solid;
+        border-right: .5em solid transparent;
+        border-bottom: 0;
+        border-left: .5em solid transparent;
+        color: black;
+    }
+    .line{
+        line-height: 40px;
+        .sub-line{
+            line-height: 30px;
+        }
+    }
+    .action-button-container{
+        display: flex;
+        justify-content: flex-end;
+
+        .action-button{
+            margin-left: 20px;
+            padding: 3px 18px;
+            color: white;
+            border-style: none;
+            
+            
+        }
+        .action-button-save{
+            background-color: #41a0b6;
+            &[disabled] {
+                background-color: #c7e5ec;
+            }
+        }
+        .action-button-cancel{
+            background-color: lightgrey;
+        }
+    }
+
+    
+}

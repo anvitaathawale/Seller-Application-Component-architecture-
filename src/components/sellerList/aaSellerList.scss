@@ -1,0 +1,46 @@
+.aa-seller-list{
+    table{
+        tr, thead {
+            border-bottom: 1px solid lightgrey;
+        }
+        tr {
+            height: 50px;
+            line-height: 20px;
+        }
+        thead {
+            height: 40px;
+            color: grey;
+        }
+        td {
+            padding: 5px 20px;
+
+            &:nth-child(1) {
+                width: 25%;
+            }
+            &:nth-child(2) {
+                width: 10%;
+            }
+            &:nth-child(3) {
+                width: 11%;
+            }
+            &:nth-child(4) {
+                width: 10%;
+                text-align: center;
+                min-width:136px;
+            }
+            &:nth-child(5) {
+                width: 10%;
+                text-align: center;
+                min-width:170px;
+            }
+            &:nth-child(6) {
+                padding: 0px;
+                text-align: center;
+                color: grey;
+            }
+        }
+        .action-delete{
+            margin-right: 20px;
+        }
+    }
+}

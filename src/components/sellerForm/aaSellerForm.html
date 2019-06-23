@@ -1,0 +1,86 @@
+<div class="aa-seller-form">
+  <h5>
+    <span>Seller Form</span>
+    <span ng-if="$ctrl.updateMode">(Edit)</span>
+  </h5>
+  <form name='sellerForm' ng-submit='submitForm(sellerForm.$valid)' novalidate>
+    <div class="line">
+      <label>Seller Name*</label>
+      <span>
+        <input type="text" ng-model="$ctrl.selectedName" required/>
+      </span>
+    </div>
+    <div class="line">
+      <label>Currencies*</label>
+      <span>
+          
+
+        <select class="selectpicker" title="" multiple 
+        ng-model="$ctrl.selectedCurrencies" required>
+        
+          <option 
+          ng-repeat="option in $ctrl.currencyOptions" 
+          value="{{option}}">{{option}}</option>
+        </select>
+      </span>
+    </div>
+    <div class="line">
+      <label>Offices*</label>
+      <span>
+        <select class="selectpicker" title="" multiple 
+        ng-model="$ctrl.selectedOffices" required>
+          <option 
+          ng-repeat="option in $ctrl.officeOptions" 
+          value="{{option}}">{{option}}</option>
+        </select>
+      </span>
+    </div> 
+    <div class="line">
+      <div class="sub-line">
+        <label>Deal Type *</label>
+        <div class="pretty p-icon p-curve">
+          <input type="checkbox" ng-model='$ctrl.selectedBidded'> 
+          <div class="state">
+              <i class="icon fa fa-check"></i>
+            <label>Bidded</label>
+          </div>
+        </div>
+        
+      </div>
+      <div class="sub-line">
+        <label></label>
+        <div class="pretty p-icon p-curve">
+            <input type="checkbox" ng-model='$ctrl.selectedGuaranteed'> 
+          <div class="state">
+              <i class="icon fa fa-check"></i>
+            <label>Guaranteed</label>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="line">
+      <label>Contact Name</label>
+      <span><input type="text" ng-model="$ctrl.selectedContactName"/></span>
+    </div>
+    <div class="line">
+      <label>Email</label>
+      <span>
+        <input type="email" name='contactEmail' ng-model="$ctrl.selectedEmail"/>
+        <span ng-show='sellerForm.contactEmail.$error.email'>Not valid email</span>
+      </span>
+    </div>       
+    <div class="action-button-container">
+      <button class="action-button action-button-cancel" ng-click='$ctrl.reset()'>Cancel</button>
+      <button class="action-button action-button-save" ng-click="$ctrl.save()" ng-disabled='sellerForm.$invalid'>
+        <span ng-if="!$ctrl.updateMode">Save</span>
+        <span ng-if="$ctrl.updateMode">Update</span>
+      </button>
+      
+      
+    </div>
+    
+     
+  </form>
+</div>
+  

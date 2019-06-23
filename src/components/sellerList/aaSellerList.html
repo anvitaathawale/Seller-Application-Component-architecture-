@@ -1,0 +1,31 @@
+<div class="aa-seller-list">
+  <h5> Seller List</h5>
+  <table>
+    <thead>
+      <tr>
+        <td width="30%">Name</td>
+        <td width="10%">Currencies</td>
+        <td width="10%">Offices</td>
+        <td width="10%">Bidded Deals</td>
+        <td width="10%">Guaranteed Deals</td>
+        <td width="40px"></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="item in $ctrl.list">
+        <td>{{item.name}}</td>
+        <td>{{item.currencies.join(', ')}}</td>
+        <td>{{item.offices.join(', ')}}</td>
+        <td>{{item.biddedDeals ? 'Yes': 'No'}}</td>
+        <td>{{item.guaranteedDeals ? 'Yes': 'No'}}</td>
+        <td>
+          
+            <i class="action-delete fa fa-trash fa-lg" aria-hidden="true" ng-click='$ctrl.deleteSeller(item)'></i>
+            <i class="action-edit fa fa-pencil fa-lg" aria-hidden="true" ng-click='$ctrl.editSeller(item)'></i>
+        </td>
+       
+      </tr>
+    </tbody>
+  </table>
+  
+</div>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+   
+    <script src="dist/bundle.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
+  </head>
+
+  <body ng-app="sellerApp">
+    
+    <div ng-controller="MainCtrl as ctrl">
+      
+      <aa-seller-form
+        edit-seller-data="ctrl.sellerToBeEdited"
+        currency-options="ctrl.allCurrencies"
+        office-options="ctrl.allOffices"
+        on-create="ctrl.createSeller(seller)"
+        on-update="ctrl.updateSeller(seller, updatedSeller)">
+      </aa-seller-form>
+      
+      <aa-seller-list 
+        list="ctrl.sellerListData"
+        on-delete="ctrl.deleteSeller(seller)"
+        on-edit="ctrl.editSeller(seller)">
+      </aa-seller-list>
+    </div>
+    
+  </body>
+</html>
