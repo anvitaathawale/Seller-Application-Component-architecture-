@@ -6,8 +6,8 @@
     "start": "webpack-dev-server --entry ./src/app.js --output-filename ./dist/bundle.js",
     "build": "webpack"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Anvita Athawale <anvita.h.athawale@gmail.com>",
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
