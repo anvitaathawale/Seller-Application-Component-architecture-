@@ -30,7 +30,7 @@
     "bootstrap-select": "^1.13.10",
     "file-loader": "^4.0.0",
     "font-awesome": "^4.7.0",
-    "jquery": "^2.1.1",
+    "jquery": "^3.5.0",
     "popper.js": "^1.15.0",
     "pretty-checkbox": "^3.0.3"
   }
